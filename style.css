@@ -2,6 +2,7 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-family: "proxima-nova-soft", sans-serif;
+  color: #fff;
 }
 body .vertical-centered-box {
   position: absolute;
@@ -13,6 +14,7 @@ body .vertical-centered-box {
   right:0;
   bottom:0;
 }
+.fa { cursor: pointer; }
 body .vertical-centered-box:after {
   content: '';
   display: inline-block;
@@ -122,6 +124,7 @@ label:hover::before {
 .gtbtn {
   position: absolute;
   top: 10px;
+  font-size: 2em;
   left: 10px;
 }
 label { font-weight: normal; position: relative; }
