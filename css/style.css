@@ -1,0 +1,58 @@
+/*!
+ * Stylesheet by: Luqman Yasin @_lyasin
+ * Copyright 2016
+ * Produced: 11th December 2015
+ */
+body, html {
+    height:100%;
+    overflow: hidden;
+}
+a, body {
+    color: #ECEEF1;
+}
+html {
+    background: linear-gradient(#fff,rgba(255,255,255,0));
+    background-image: rgb(31,44,101);
+    background-image: -moz-linear-gradient(-45deg,  rgba(31,44,101,1) 0%, rgba(30,87,153,1) 32%, rgba(133,187,205,1) 100%);
+    background-image: -webkit-linear-gradient(-45deg,  rgba(31,44,101,1) 0%,rgba(30,87,153,1) 32%,rgba(133,187,205,1) 100%);
+    background-image: linear-gradient(135deg,  rgba(31,44,101,1) 0%,rgba(30,87,153,1) 32%,rgba(133,187,205,1) 100%), linear-gradient(#fff,rgba(255,255,255,0));
+    background-repeat: no-repeat;
+}
+#bg {}
+body::before, .container:first-of-type::before { display:block; content: "&nbsp;"; font-size:1px; margin-top:0px; }
+.container {
+    height:100%;
+    box-sizing: border-box;
+}
+.container:first-of-type .row {
+    margin:15% 0 0 0;
+    padding:20px;
+    border-radius:5px;
+}
+img { border-radius: 5px; }
+.container:first-of-type a {
+    pointer-events: all;
+}
+.container:first-of-type p, .container:first-of-type a {
+    text-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+/*.container:first-of-type .row .nine::after {
+    display: block;
+    //background: #ccc;
+    content: '\f107';
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 5em;
+    margin:0 auto;
+    width:48px;
+    height:60px;
+    text-align: center;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 0 1px 2px rgba(0,0,0,.3);
+    cursor: pointer;
+    pointer-events: all;
+}*/
+
+h1 {
+text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+}
