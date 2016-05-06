@@ -36,6 +36,7 @@ if(isset($_GET)){
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/skeleton.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 
   <!-- JAVASCRIPTS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -106,7 +107,7 @@ particleground(document.getElementById('particles-background'), {
       url: 'post.php',
       data: 'url='+url,
       beforeSend: function(){ $('.content').html('<div class="loader-circle"></div><div class="loader-line-mask"><div class="loader-line"></div></div>'); },
-      success: function(data){ $('.content').html('<h1>'+data+'</h1>'); $('.gtbtn').append('<span class="refrsh" onclick="location.reload();"><i class="fa fa-refresh" aria-hidden="true"></i></span>'); }
+      success: function(data){ $('.content').html('<h1>'+data+'<i class="fa fa-clipboard" aria-hidden="true"></i></h1>'); $('.gtbtn').append('<span class="refrsh" onclick="location.reload();"><i class="fa fa-refresh" aria-hidden="true"></i></span>'); }
     });
   });
   
