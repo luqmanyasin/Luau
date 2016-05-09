@@ -46,6 +46,7 @@ if(isset($_GET)){
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.0/notify.min.js"></script>
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
   
 </head>
 <body>
@@ -101,7 +102,6 @@ particleground(document.getElementById('particles-background'), {
 });
 
 </script>
-<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 <script>
   $('#shrt').submit(function(formValidated){
     formValidated.preventDefault(); 
