@@ -110,7 +110,7 @@ particleground(document.getElementById('particles-background'), {
       url: 'post.php',
       data: 'url='+url,
       beforeSend: function(){ $('.content').html('<div class="loader-circle"></div><div class="loader-line-mask"><div class="loader-line"></div></div>'); },
-      success: function(data){ $('.content').html('<h1><span class="copyme">'+data+'</span><i class="fa fa-clipboard" data-clipboard-target=".copyme" aria-hidden="true"></i></h1>'); $('.gtbtn').append('<span class="refrsh" onclick="location.reload();"><i class="fa fa-refresh" aria-hidden="true"></i></span>'); }
+      success: function(data){ $('.content').html('<h1><span class="copyme">'+data+'</span><i class="fa fa-clipboard" data-clipboard-target=".copyme" aria-hidden="true"></i></h1>'); $('.gtbtn').append('<span class="refrsh" onclick="location.reload();"><i class="fa fa-refresh" aria-hidden="true"></i></span>'); new Clipboard('.fa-clipboard'); }
     });
   });
   new Clipboard('.fa-clipboard');
