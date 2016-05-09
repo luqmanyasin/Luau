@@ -39,11 +39,13 @@ if(isset($_GET)){
   <link href="css/skeleton.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.0/styles/metro/notify-metro.min.css">
 
   <!-- JAVASCRIPT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.0/notify.min.js"></script>
   
 </head>
 <body>
@@ -99,7 +101,6 @@ particleground(document.getElementById('particles-background'), {
 });
 
 </script>
-<!-- Place this tag right after the last button or just before your close body tag. -->
 <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 <script>
   $('#shrt').submit(function(formValidated){
@@ -110,7 +111,7 @@ particleground(document.getElementById('particles-background'), {
       url: 'post.php',
       data: 'url='+url,
       beforeSend: function(){ $('.content').html('<div class="loader-circle"></div><div class="loader-line-mask"><div class="loader-line"></div></div>'); },
-      success: function(data){ $('.content').html('<h1><span class="copyme">'+data+'</span><i class="fa fa-clipboard" data-clipboard-target=".copyme" aria-hidden="true"></i></h1>'); $('.gtbtn').append('<span class="refrsh" onclick="location.reload();"><i class="fa fa-refresh" aria-hidden="true"></i></span>'); new Clipboard('.fa-clipboard'); }
+      success: function(data){ $('.content').html('<h1><span class="copyme">'+data+'</span> <i class="fa fa-clipboard" data-clipboard-target=".copyme" aria-hidden="true"></i></h1>'); $('.gtbtn').append('<span class="refrsh" onclick="location.reload();"><i class="fa fa-refresh" aria-hidden="true"></i></span>'); new Clipboard('.fa-clipboard'); $('.fa-clipboard').click(function(){$.notify("Link Copied", "success");}); }
     });
   });
   new Clipboard('.fa-clipboard');
