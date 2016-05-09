@@ -28,7 +28,7 @@ if($_POST['url']) {
   $event = [[$new_name => $_POST['url']]];
   $filename = "files.json";
   $ev = preg_replace(array('/'.preg_quote('[').'/','/'.preg_quote(']').'/'), '', json_encode($event, true));
-  print $url.'https://lyasin.me/?'.$new_name;
+  print $url.'/?'.$new_name;
     
   $handle = @fopen($filename, 'r+');
   if ($handle === null) {
