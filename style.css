@@ -28,7 +28,7 @@ body .vertical-centered-box .content {
   box-sizing: border-box;
   display: inline-block;
   vertical-align: middle;
-  text-align: left;
+  text-align: center;
   max-width: 90%;
 }
 * {
@@ -126,9 +126,12 @@ label:hover::before {
   top: 10px;
   font-size: 2em;
   left: 10px;
+  right: 10px;
 }
 label { font-weight: normal; position: relative; }
 form { width: 100%; }
+.urlA{margin:0 !important;padding:0 !important;}
+.urlF{margin-bottom:0 !important;padding-bottom:0 !important;}
 input[type=url] {
   background: transparent;
   width: auto;
@@ -141,7 +144,8 @@ input[type=url] {
   padding: 50px 0;
   width: 100%;
   box-sizing: content-box;
-}/*
+}
+/*
 input[type=url]:hover {
   border-bottom: 5px solid #fff;
 }*/
@@ -212,7 +216,7 @@ h1, img, form, input {
         -ms-animation: fadein 2s; /* Internet Explorer */
          -o-animation: fadein 2s; /* Opera < 12.1 */
             animation: fadein 2s;
-           transition: 2s;
+           transition: .5s;
 }
 h1 {
             	color: #fff;
