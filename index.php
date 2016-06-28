@@ -54,20 +54,12 @@ if(isset($_GET)){
   <div id="particles-foreground" class=""></div>
   <div class="vertical-centered-box">
     <div class="content">
-      <div class="forms">
-        <form id="shrt" action="post.php" method="post">
-          <label>
-            <input class="url" type="url" placeholder="Shorten URL" name="url" required/>
-          </label>
-        </form>
-      </div>
+      <form id="shrt" action="post.php" method="post"><label><input class="url" type="url" placeholder="Shorten URL" name="url" required/></label></form>
     </div>
   </div>
   <div class="gtbtn">
   <!-- Place this tag where you want the button to render. -->
     <a class="github-button" href="https://github.com/luqmanyasin/Luau/fork" data-icon="octicon-repo-forked" aria-label="Fork luqmanyasin/Luau on GitHub">Fork</a>
-    <a href="" value="" class="u-pull-right addMore button-primary button">Add More Links</a>
-
   </div>
   <script src="scripts.js"></script>
 </body>
