@@ -23,19 +23,7 @@ function createID() {
   }
 }
 
-function checkExists($url) { // A function to check if the url has been previously shortened
-  $openFile = json_decode(file_get_contents('files.json'), true); // Read files.json and interpret as json
-  foreach($url as $key => $val){
-    $req = $key;
-  }
-  for($i=0;$i<count($openFile);$i++){
-    if($openFile[$i][$req]){
-      return true;
-    }
-  }
-  return false;
 
-}
 
 if($_POST['url']) {
   $new_name = createID();
