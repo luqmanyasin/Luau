@@ -2,7 +2,7 @@
 $url = 'https://lyasin.me'; // Your URL, with http/https and without an ending slash.
 function random($length = 3) {      
   $chars = 'bcdfghjklmnprstvwxzaeiou0123456789';
-    
+
   for ($p = 0; $p < $length; $p++) {
     $result .= ($p%2) ? $chars[mt_rand(19, 33)] : $chars[mt_rand(0, 18)];
   }
@@ -12,7 +12,7 @@ function random($length = 3) {
 function createID() {
   $openFile = json_decode(file_get_contents('files.json'), true);
   $len = ($len<3) ? 3 : round(count($openFile)/34);
-  
+
   $gen = random($len);
   for($i=0;$i<count($openFile);$i++){
     if($openFile[$i][$gen]){
@@ -31,30 +31,31 @@ function checkExists($url) { // A function to check if the url has been previous
 
 
 if($_POST['url']) {
-  if(checkExists($_POST['url'])) {
-    print "<script>alert()</script>";
-  }
-  $new_name = createID();
-  $event = [[$new_name => $_POST['url']]];
-  $filename = "files.json";
-  $ev = preg_replace(array('/'.preg_quote('[').'/','/'.preg_quote(']').'/'), '', json_encode($event, true));
-  print $url.'/?'.$new_name;
-    
-  $handle = @fopen($filename, 'r+');
-  if ($handle === null) {
-    $handle = fopen($filename, 'w+');
-  }
+  if(!($checkMe = checkExists($_POST['url']))) {
+    $new_name = createID();
+    $event = [[$new_name => $_POST['url']]];
+    $filename = "files.json";
+    $ev = preg_replace(array('/'.preg_quote('[').'/','/'.preg_quote(']').'/'), '', json_encode($event, true));
+    print $url.'/?'.$new_name;
 
-  if ($handle) {
-    fseek($handle, 0, SEEK_END);
-    if (ftell($handle) > 0) {
-      fseek($handle, -1, SEEK_END);
-      fwrite($handle, ',', 1);
-      fwrite($handle, $ev . ']');
-    } else {
-      fwrite($handle, json_encode($event));
+    $handle = @fopen($filename, 'r+');
+    if ($handle === null) {
+      $handle = fopen($filename, 'w+');
     }
-    fclose($handle);
+
+    if ($handle) {
+      fseek($handle, 0, SEEK_END);
+      if (ftell($handle) > 0) {
+        fseek($handle, -1, SEEK_END);
+        fwrite($handle, ',', 1);
+        fwrite($handle, $ev . ']');
+      } else {
+        fwrite($handle, json_encode($event));
+      }
+      fclose($handle);
+    }
+  } else {
+    print $url.'/?'.$checkMe;
   }
 
 } else {
