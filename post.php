@@ -31,6 +31,9 @@ function checkExists($url) { // A function to check if the url has been previous
 
 
 if($_POST['url']) {
+  if(checkExists($_POST['url'])) {
+    print "<script>alert()</script>";
+  }
   $new_name = createID();
   $event = [[$new_name => $_POST['url']]];
   $filename = "files.json";
