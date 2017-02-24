@@ -1,5 +1,5 @@
 <?php
-$url = 'https://lyasin.me'; // Your URL, with http/https and without an ending slash.
+$url = 'https://lyasin.me/beta'; // Your URL, with http/https and without an ending slash.
 function random($length = 3) {      
   $chars = 'bcdfghjklmnprstvwxzaeiou0123456789';
     
