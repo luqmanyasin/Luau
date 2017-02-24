@@ -22,5 +22,14 @@ function createID() {
   }
 }
 
-print createID();
+function checkExists($url) { // A function to check if the url has been previously shortened
+  $openFile = json_decode(file_get_contents('files.json'), true); // Read files.json and interpret as json
+
+  return $check = array_search($url, $openFile[0]); // Search array for value $url and return check
+
+}
+
+var_dump( checkExists("http://test.com"));
+
+//print createID();
 ?>
