@@ -3,6 +3,6 @@
 A Simple URL Shortening script powered by PHP & jQuery with a bit of JSON.
 
 ## Installation
-Ensure you have one json entry in files.json before you upload the script. 
+Ensure you have one json entry in files.json before you upload the script.   
 In the format: `[{"abc":"http:\/\/test.com"}]`
 
